@@ -5,11 +5,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+    <!-- Reference the CMS configuration -->
+    <link rel="cms-config-url" href="/admin/config.yml" type="text/yaml" />
     <title>Content Manager</title>
+    <!-- Load the Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
+  
+
+    <script>
+        // Initialize Netlify Identity if available
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", (user) => {
+                // If no user is logged in, listen for the login event
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        // Reload the page after login to load the CMS
+                        document.location.href = "/admin/";
+                    });
+                } else {
+                    // If the user is already logged in, you may hide the login button
+                    document.getElementById("login-button").style.display = "none";
+                }
+            });
+        }
+
+        // Open the Identity widget when the button is clicked
+        document.getElementById("login-button").addEventListener("click", () => {
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.open();
+            }
+        });
+    </script>
+
+    <!-- Load Decap CMS after the Identity widget -->
     <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
 </body>
 
