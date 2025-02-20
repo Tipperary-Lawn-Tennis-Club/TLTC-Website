@@ -1,41 +1,24 @@
 ---
-// admin.astro
 ---
+// src/pages/admin.astro
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Admin</title>
-    <!-- Decap CMS config reference -->
-    <link rel="cms-config-url" href="/admin/config.yml" type="text/yaml" />
-    <!-- Netlify Identity script -->
+
+    <!-- Tell Decap CMS where to find its config file -->
+    <link rel="cms-config-url" type="text/yaml" href="/admin/config.yml" />
+
+    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <button id="login-button">Log In</button>
 
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', user => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/';
-            });
-          }
-        });
-      }
 
-      document.getElementById('login-button').addEventListener('click', () => {
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.open();
-        }
-      });
-    </script>
-
-    <!-- Decap CMS -->
+    <!-- Load Decap CMS after the Identity script -->
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
   </body>
 </html>
- 
