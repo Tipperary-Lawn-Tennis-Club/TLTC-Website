@@ -4,7 +4,8 @@ const newsCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		date: z.date(),
-		thumbnail: z.string().optional(),
+		thumbnail: z.string(),
+		alt: z.string(),
 	}),
 });
 

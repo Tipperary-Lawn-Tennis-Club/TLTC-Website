@@ -12,7 +12,7 @@ const Navbar = () => {
 			</div>
 			<div className="navbar-end">
 				<div className="dropdown dropdown-end">
-					<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+					<div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-5 w-5"
@@ -31,7 +31,7 @@ const Navbar = () => {
 					</div>
 					<ul
 						tabIndex={0}
-						class="menu menu-md  dropdown-content bg-base-100  rounded-box z-1 mt-3 w-52 p-2 shadow"
+						class="menu menu-xl  dropdown-content bg-base-100  rounded-box z-1 mt-3 w-52 p-2 shadow"
 					>
 						<li>
 							<a className="active:bg-primary active:text-primary-content">
@@ -40,7 +40,7 @@ const Navbar = () => {
 						</li>
 						<li>
 							<a
-								href="/news"
+								href="/news/"
 								className="active:bg-primary active:text-primary-content"
 							>
 								News
@@ -76,8 +76,8 @@ const Navbar = () => {
 					</ul>
 				</div>
 			</div>
-			<div className="navbar-end hidden lg:flex lg:items-center ">
-				<ul className="menu menu-horizontal gap-1 px-1">
+			<div className="navbar-end hidden dflex xl:items-center ">
+				<ul className="menu menu-horizontal gap-1 px-1 flex-nowrap">
 					<li>
 						<a className="btn bg- btn-ghost">Club</a>
 					</li>

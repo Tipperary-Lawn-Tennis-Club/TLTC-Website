@@ -3,7 +3,8 @@ export interface IPost {
 	data: {
 		title: string;
 		date: string;
-		thumbnail?: string;
+		thumbnail: string;
+		alt: string;
 	};
 	body: string;
 	filepath: string;

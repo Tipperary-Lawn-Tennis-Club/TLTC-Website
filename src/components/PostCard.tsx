@@ -6,7 +6,6 @@ const PostCard = (post: IPost) => {
 				<img src={post.data.thumbnail} alt="Movie" />
 			</figure>
 			<div className="card-body">
-				{JSON.stringify(post)}
 				<h2 className="card-title">{post.data.title}</h2>
 				<p>{new Date(post.data.date).toLocaleDateString()}</p>
 				<div className="card-actions justify-end">
