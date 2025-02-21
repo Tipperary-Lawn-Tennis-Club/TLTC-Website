@@ -14,7 +14,7 @@ const Header = () => {
 				<div className="hero-overlay"></div>
 				<div className="hero-content text-neutral-content flex-col">
 					<div className="max-w-2xl text-center">
-						<h1 className="mb-5 text-5xl font-bold">
+						<h1 className="mb-5 text-6xl font-bold">
 							Tennis, Community, Excellence –<br /> Welcome to TLTC
 						</h1>
 						<p className="mb-5">
@@ -22,7 +22,7 @@ const Header = () => {
 							atmosphere together with fully heated, modern and ecological
 							facilities which are well maintained.
 						</p>
-						<button className="btn btn-accent text-accent-content">
+						<button className="btn btn-primary text-primary-content">
 							Become a member
 						</button>
 					</div>
