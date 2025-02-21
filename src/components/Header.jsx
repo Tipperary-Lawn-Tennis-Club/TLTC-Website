@@ -15,7 +15,7 @@ const Header = () => {
 				<div className="hero-content text-neutral-content flex-col">
 					<div className="max-w-2xl text-center">
 						<h1 className="mb-5 text-5xl font-bold">
-							Tennis, Community, Excellence – Welcome to TLTC
+							Tennis, Community, Excellence –<br /> Welcome to TLTC
 						</h1>
 						<p className="mb-5">
 							The TLTC is a unique tennis club offering a friendly and cosy

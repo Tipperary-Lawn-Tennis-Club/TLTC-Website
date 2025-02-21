@@ -1,6 +1,5 @@
 ---
 // React Imports
-import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import Content from '../components/Content';
@@ -10,12 +9,19 @@ import NewsFeed from '../components/NewsFeed';
 // Style imports
 import '../styles/global.css';
 // Astro Imports
+import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const news = getCollection('news');
+interface INewsObject {
+	title: string;
+	date: number;
+	content: string;
+}
 
-console.log(news);
-const latestNews = news.sort((a : object, b: object) => b.date - a.date).slice(0, 3);
+const news : INewsObject[] = await getCollection('news');
+console.table(news);
+const latestNews = news.sort((a : INewsObject, b: INewsObject) => b.date - a.date).slice(0, 3);
+console.log("latest",latestNews);
 ---
 
 <Layout>

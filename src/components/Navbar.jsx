@@ -3,7 +3,7 @@ import logo_tr from "../assets/logo_tr.png";
 
 const Navbar = () => {
 	return (
-		<div className="navbar bg-base-300/90 text-gray-700 sticky top-0 z-30">
+		<div className="navbar bg-base-300/90 backdrop-blur-3xl text-gray-700 sticky top-0 z-30">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
