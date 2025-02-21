@@ -39,7 +39,10 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li>
-							<a className="active:bg-primary active:text-primary-content">
+							<a
+								href="/news"
+								className="active:bg-primary active:text-primary-content"
+							>
 								News
 							</a>
 						</li>

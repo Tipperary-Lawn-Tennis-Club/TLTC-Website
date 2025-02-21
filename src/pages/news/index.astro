@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar";
+import PostCard from "../../components/PostCard";
+import "../../styles/global.css";
+// Fetch all posts from the "news" collection
+const allNews = await getCollection("news");
+
+console.log(allNews);
+
+// Sort them by date (descending)
+const sortedNews = allNews.sort(
+	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+
+console.log(sortedNews);
+---
+
+<Layout>
+	<Navbar />
+	{sortedNews.map((post) => <PostCard post={post} />)}
+</Layout>
