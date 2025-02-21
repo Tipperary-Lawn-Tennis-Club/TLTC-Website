@@ -1,14 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import Content from '../components/Content';
+import Footer from '../components/Footer';
+import SectionTransition from '../components/SectionTransition';
+import IconSection from '../components/IconSection';
 import '../styles/global.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+	<Navbar />
 	<Header />
+	<SectionTransition bgColor={'bg-gray-200'} scrollId={'content'} />
+	<!-- <IconSection /> -->
 	<Content />
+	<Footer />
 </Layout>
