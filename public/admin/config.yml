@@ -11,6 +11,9 @@ collections:
     label: "News" # Used in the UI
     folder: "src/content/news" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    edit: true # Allow users to edit existing documents in this collection
+    delete: true # Allow users to delete documents in this collection
+    update: true # Allow users to update existing documents in this collection
     fields: # The fields for each document, usually in frontmatter
       - {
           label: "Layout",
