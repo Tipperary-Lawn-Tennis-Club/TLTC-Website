@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import hero_image from "../assets/hero.jpg";
+import Footer from "./Footer";
+import hero_image from "../assets/court-bg.jpg";
+import ContactForm from "./ContactForm";
 
 const ContactContent = () => {
 	return (
@@ -12,25 +14,9 @@ const ContactContent = () => {
 				}}
 			>
 				<div className="hero-overlay"></div>
-				<Navbar />
-
-				<fieldset className="fieldset w-2xl bg-base-200 border border-base-300 p-4 rounded-box">
-					<legend className="fieldset-legend text-xl">Get in Touch</legend>
-
-					<label className="fieldset-label">Email</label>
-					<input type="email" className="input" placeholder="Email" />
-
-					<label className="fieldset-label">Name</label>
-					<input type="text" className="input" placeholder="Name" />
-
-					<label className="fieldset-label">Message</label>
-					<textarea className="textarea" placeholder="Message"></textarea>
-
-					<button className="btn bg-primary/30 hover:bg-primary/60 mt-4">
-						Send
-					</button>
-				</fieldset>
+				<ContactForm />
 			</div>
+			<Footer />
 		</div>
 	);
 };

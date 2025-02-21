@@ -1,6 +1,6 @@
 const SectionTransition = ({ bgColor, scrollId }) => {
 	return (
-		<div className={`w-full h-10 ${bgColor}`}>
+		<div className={`w-full h-10 ${bgColor} hidden md:block`}>
 			<a
 				onClick={(e) => {
 					// scroll to content

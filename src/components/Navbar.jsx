@@ -3,9 +3,15 @@ import logo_tr from "../assets/logo_tr.png";
 
 const Navbar = () => {
 	return (
-		<div className="navbar bg-base-300 backdrop-blur-3xl absolute top-0 text-gray-700 ">
+		<div className="navbar p-0 min-h-1.5 bg-gray-300 backdrop-blur-3xl text-gray-700 ">
 			<div className="navbar-start">
-				<div className="dropdown">
+				<img src={logo_tr.src} alt="Club logo" className="w-16 h-16" />
+				<a href="/" className="font-semibold px-3 text-base-content text-sm">
+					Tipperary Lawn Tennis Club{" "}
+				</a>
+			</div>
+			<div className="navbar-end">
+				<div className="dropdown dropdown-end">
 					<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -25,19 +31,30 @@ const Navbar = () => {
 					</div>
 					<ul
 						tabIndex={0}
-						class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+						class="menu menu-md  dropdown-content bg-base-100  rounded-box z-1 mt-3 w-52 p-2 shadow"
 					>
 						<li>
-							<a>Club</a>
+							<a className="active:bg-primary active:text-primary-content">
+								Club
+							</a>
 						</li>
 						<li>
-							<a>News</a>
+							<a className="active:bg-primary active:text-primary-content">
+								News
+							</a>
 						</li>
 						<li>
-							<a>Diary</a>
+							<a className="active:bg-primary active:text-primary-content">
+								Diary
+							</a>
 						</li>
 						<li>
-							<a>Contact</a>
+							<a
+								href="/contact"
+								className="active:bg-primary active:text-primary-content"
+							>
+								Contact
+							</a>
 						</li>
 						<li>
 							<a
@@ -49,14 +66,12 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li>
-							<a>Non-Members</a>
+							<a className="active:bg-primary active:text-primary-content">
+								Non-Members
+							</a>
 						</li>
 					</ul>
 				</div>
-				<img src={logo_tr.src} alt="Club logo" className="w-10 h-10" />
-				<a href="/" className="font-bold px-3 text-xl">
-					Tipperary Lawn Tennis Club
-				</a>
 			</div>
 			<div className="navbar-end hidden lg:flex lg:items-center ">
 				<ul className="menu menu-horizontal gap-1 px-1">

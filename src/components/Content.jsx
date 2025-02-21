@@ -12,7 +12,7 @@ const Content = () => {
 					<div className="flex flex-row items-center justify-between bg-gray-100 p-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
 						<div className="flex-1 max-w-xl">
 							<h2 className="text-4xl font-bold mb-5">
-								TLTC's Rich Tennis Heritage
+								Rich Tennis Heritage
 							</h2>
 							<p className="mb-5 text-lg text-gray-700 leading-relaxed">
 								TLTC is steeped in history and is strongly affiliated to Tennis
