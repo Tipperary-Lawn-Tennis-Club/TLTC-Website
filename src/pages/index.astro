@@ -1,20 +1,28 @@
 ---
+// React Imports
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 import SectionTransition from '../components/SectionTransition';
-import IconSection from '../components/IconSection';
+import NewsFeed from '../components/NewsFeed';
+// Style imports
 import '../styles/global.css';
+// Astro Imports
+import { getCollection } from 'astro:content';
 
+const news = getCollection('news');
+
+console.log(news);
+const latestNews = news.sort((a : object, b: object) => b.date - a.date).slice(0, 3);
 ---
 
 <Layout>
 	<Navbar />
 	<Header />
 	<SectionTransition bgColor={'bg-gray-200'} scrollId={'content'} />
-	<!-- <IconSection /> -->
+	<NewsFeed data={latestNews}/>
 	<Content />
 	<Footer />
 </Layout>
