@@ -1,34 +1,31 @@
 ---
 // React Imports
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
-import Content from '../components/Content';
-import Footer from '../components/Footer';
-import SectionTransition from '../components/SectionTransition';
-import NewsFeed from '../components/NewsFeed';
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Content from "../components/Content";
+import Footer from "../components/Footer";
+import SectionTransition from "../components/SectionTransition";
+import NewsFeed from "../components/NewsFeed";
 // Style imports
-import '../styles/global.css';
+import "../styles/global.css";
 // Astro Imports
-import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-interface INewsObject {
-	title: string;
-	date: number;
-	content: string;
-}
-
-const news : INewsObject[] = await getCollection('news');
-console.table(news);
-const latestNews = news.sort((a : INewsObject, b: INewsObject) => b.date - a.date).slice(0, 3);
-console.log("latest",latestNews);
+const news = await getCollection("news");
+const sortedNews = news
+	.sort(
+		(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+	)
+	.slice(0, 3);
+console.log(news);
 ---
 
 <Layout>
 	<Navbar />
 	<Header />
-	<SectionTransition bgColor={'bg-gray-200'} scrollId={'content'} />
-	<NewsFeed data={latestNews}/>
+	<SectionTransition bgColor={"bg-gray-200"} scrollId={"content"} />
+	<NewsFeed data={sortedNews} />
 	<Content />
 	<Footer />
 </Layout>

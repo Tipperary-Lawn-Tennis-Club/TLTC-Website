@@ -22,9 +22,12 @@ const Header = () => {
 							atmosphere together with fully heated, modern and ecological
 							facilities which are well maintained.
 						</p>
-						<button className="btn btn-primary text-primary-content">
+						<a
+							href="/contact"
+							className="btn bg-primary/60 text-primary-content"
+						>
 							Become a member
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>

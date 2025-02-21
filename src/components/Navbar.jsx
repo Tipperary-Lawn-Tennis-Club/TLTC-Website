@@ -3,7 +3,7 @@ import logo_tr from "../assets/logo_tr.png";
 
 const Navbar = () => {
 	return (
-		<div className="navbar bg-base-300/70 backdrop-blur-3xl text-gray-700 ">
+		<div className="navbar bg-base-300 backdrop-blur-3xl absolute top-0 text-gray-700 ">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,7 +54,9 @@ const Navbar = () => {
 					</ul>
 				</div>
 				<img src={logo_tr.src} alt="Club logo" className="w-10 h-10" />
-				<a className="font-bold px-3 text-xl">Tipperary Lawn Tennis Club</a>
+				<a href="/" className="font-bold px-3 text-xl">
+					Tipperary Lawn Tennis Club
+				</a>
 			</div>
 			<div className="navbar-end hidden lg:flex lg:items-center ">
 				<ul className="menu menu-horizontal gap-1 px-1">
@@ -75,7 +77,7 @@ const Navbar = () => {
 					</li>
 					<li>
 						<a
-							className="btn bg-accent/60"
+							className="btn bg-accent/30 hover:bg-accent/60"
 							href="https://www.smartclubcloud.com/"
 							target="_blank"
 							noreferer
