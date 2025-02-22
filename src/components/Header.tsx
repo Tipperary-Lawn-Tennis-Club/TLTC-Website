@@ -1,6 +1,5 @@
 import hero_image from "../assets/hero.jpg";
-import hero_svg from "../assets/Grand slam-bro.svg";
-import Navbar from "./Navbar";
+
 
 const Header = () => {
 	return (
@@ -22,7 +21,10 @@ const Header = () => {
 							atmosphere together with fully heated, modern and ecological
 							facilities which are well maintained.
 						</p>
-						<a href="/news" className="btn bg-primary/60 text-primary-content">
+						<a
+							href="/contact"
+							className="btn bg-primary/60 text-primary-content"
+						>
 							Become a member
 						</a>
 					</div>

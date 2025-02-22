@@ -1,10 +1,12 @@
-const SectionTransition = ({ bgColor, scrollId }) => {
+import type ISectionTransitionProps from "../types";
+
+const SectionTransition = ({ bgColor, scrollId }: ISectionTransitionProps) => {
 	return (
 		<div className={`w-full h-10 ${bgColor} hidden md:block`}>
 			<a
 				onClick={(e) => {
 					// scroll to content
-					console.log(scrollId);
+					if (!scrollId) return;
 					document
 						.querySelector("#" + scrollId)
 						.scrollIntoView({ behavior: "smooth" });

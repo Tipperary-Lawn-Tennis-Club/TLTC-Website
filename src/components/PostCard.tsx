@@ -3,7 +3,11 @@ const PostCard = (post: IPost) => {
 	return (
 		<div className="card card-side bg-base-100 shadow-sm">
 			<figure>
-				<img src={post.data.thumbnail} alt="Movie" />
+				<img
+					className="max-w-lg"
+					src={post.data.thumbnail}
+					alt={post.data.alt}
+				/>
 			</figure>
 			<div className="card-body">
 				<h2 className="card-title">{post.data.title}</h2>
