@@ -1,9 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import Article from "../../components/Article";
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/global.css";
-
+import Navbar from "../../components/Navbar.tsx";
+import Footer from "../../components/Footer.tsx";
 export async function getStaticPaths() {
 	const allNews = await getCollection("news");
 
@@ -19,11 +21,7 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-	<article class="prose max-w-prose">
-		<h1 class="mb-2">{post.data.title}</h1>
-		<p class="text-sm text-gray-500">
-			Published on {new Date(post.data.date).toLocaleDateString()}
-		</p>
-		<Content />
-	</article>
+	<Navbar />
+	<Article {...post} />
+	<Footer />
 </Layout>

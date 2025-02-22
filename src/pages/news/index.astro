@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import PostCard from "../../components/PostCard";
 import "../../styles/global.css";
 // Fetch all posts from the "news" collection
@@ -17,12 +18,11 @@ const sortedNews = allNews.sort(
 
 <Layout>
 	<Navbar />
-    <!-- paginate all the posts -->
-	{
-		sortedNews.map((post) => (
-			<div class="container mx-auto">
-				<PostCard {...post} />
-			</div>
-		))
-	}
+	<div
+		class="h-screen flex flex-col justify-center items-center"
+	>
+		{sortedNews.map((post) => <PostCard {...post} />)}
+	</div>
+
+	<Footer />
 </Layout>

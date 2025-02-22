@@ -26,3 +26,8 @@ export interface IPost {
 	collection: string;
 	slug: string;
 }
+
+export interface ISectionTransitionProps {
+	bgColor: string;
+	scrollId: string;
+}
