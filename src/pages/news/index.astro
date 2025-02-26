@@ -14,12 +14,9 @@ const sortedNews = allNews.sort(
 ---
 
 <Layout>
-	<!-- Added padding-top to push content below the absolutely positioned navbar -->
-	<div class="h-screen">
-		<Navbar />
-		<div class="grid grid-cols-1 pt-40 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-			{sortedNews.map((post) => <PostCard {...post} />)}
-		</div>
-		<Footer />
+	<Navbar />
+	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		{sortedNews.map((post) => <PostCard {...post} />)}
 	</div>
+	<Footer />
 </Layout>

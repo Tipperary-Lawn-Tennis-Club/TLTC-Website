@@ -1,8 +1,26 @@
 ---
+import PostCard from "./PostCard.astro";
+import { getCollection } from "astro:content";
+import type { IPost } from "../types";
 
+const allNews: IPost[] = await getCollection("news");
+
+const sortedNews = allNews
+	.sort(
+		(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+	)
+	.slice(0, 3) as IPost[];
 ---
 
-<div class="container latest-posts bg-gray-200">
-	<h2 class="text-3xl font-bold mb-4">Latest Posts</h2>
-	<div class="grid gap-6"></div>
+<div id="content" class="bg-gray-300 py-80">
+	<div class="container mx-auto">
+		<div class="flex flex-col gap-16 rounded-2xl bg-gray-200">
+			<h2 class="text-4xl font-bold text-center">Latest News</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+				{sortedNews.map((post) => <PostCard {...post} />)}
+				
+			</div>
+
+		</div>
+	</div>
 </div>

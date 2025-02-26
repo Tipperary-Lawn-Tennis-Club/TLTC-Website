@@ -9,21 +9,15 @@ import NewsFeed from "../components/NewsFeed.astro";
 import "../styles/global.css";
 // Astro Imports
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from "astro:content";
 
-const news = await getCollection("news");
-const sortedNews = news
-	.sort(
-		(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
-	)
-	.slice(0, 3);
-console.log(news);
+
+
 ---
 
 <Layout>
 	<Header />
 	<SectionTransition bgColor={"bg-gray-200"} scrollId={"content"} />
-	<NewsFeed data={sortedNews} />
+	<NewsFeed />
 	<Content />
 	<Footer />
 </Layout>
