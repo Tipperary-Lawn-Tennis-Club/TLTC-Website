@@ -1,28 +1,25 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import PostCard from "../../components/PostCard";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
-// Fetch all posts from the "news" collection
-const allNews = await getCollection("news");
+import type { IPost } from "../../types";
 
-console.log(allNews);
-
-// Sort them by date (descending)
+const allNews: IPost[] = await getCollection("news");
 const sortedNews = allNews.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
 ---
 
 <Layout>
-	<Navbar />
-	<div
-		class="h-screen flex flex-col justify-center items-center"
-	>
-		{sortedNews.map((post) => <PostCard {...post} />)}
+	<!-- Added padding-top to push content below the absolutely positioned navbar -->
+	<div class="h-screen">
+		<Navbar />
+		<div class="grid grid-cols-1 pt-40 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+			{sortedNews.map((post) => <PostCard {...post} />)}
+		</div>
+		<Footer />
 	</div>
-
-	<Footer />
 </Layout>

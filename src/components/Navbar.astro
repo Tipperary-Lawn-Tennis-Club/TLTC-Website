@@ -1,0 +1,128 @@
+---
+import logo_tr from "../assets/logo_tr.png";
+---
+
+<div
+	class="navbar absolute top-0 p-3 min-h-1.5 bg-gray-900 opacity-75 backdrop-blur-3xl text-gray-200"
+>
+	<div class="navbar-start">
+		<img src={logo_tr.src} alt="Club logo" class="w-16 h-16" />
+		<a href="/" class="px-3 opacity-100 font-bold text-lg">
+			Tipperary Lawn Tennis Club{" "}
+		</a>
+	</div>
+	<div class="navbar-end">
+		<div class="dropdown dropdown-end">
+			<div tab-index={0} role="button" class="btn btn-ghost lg:hidden">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-5 w-5"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					{" "}
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h8m-8 6h16"
+					>
+					</path>{" "}
+				</svg>
+			</div>
+			<ul
+				tab-index={0}
+				class="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+			>
+				<li>
+					<a class="active:bg-primary active:text-primary-content">Club</a>
+				</li>
+				<li>
+					<a
+						href="/news/"
+						class="active:bg-primary active:text-primary-content"
+					>
+						News
+					</a>
+				</li>
+				<li>
+					<a class="active:bg-primary active:text-primary-content">Diary</a>
+				</li>
+				<li>
+					<a
+						href="/contact"
+						class="active:bg-primary active:text-primary-content"
+					>
+						Contact
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.smartclubcloud.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Members Login
+					</a>
+				</li>
+				<li>
+					<a
+						class="btn bg-accent/30 hover:bg-accent/60"
+						href="https://www.smartclubcloud.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Members Login
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="navbar-end hidden lg:flex lg:items-center">
+		<ul class="menu menu-horizontal gap-6 font-bold text-lg px-1">
+			<li>
+				<a class="active:bg-primary active:text-primary-content">Club</a>
+			</li>
+			<li>
+				<a href="/news/" class="active:bg-primary active:text-primary-content">
+					News
+				</a>
+			</li>
+			{
+				/* <li>
+				<a class="active:bg-primary active:text-primary-content">
+					Diary
+				</a>
+			</li> */
+			}
+			<li>
+				<a
+					href="/contact"
+					class="active:bg-primary active:text-primary-content"
+				>
+					Contact
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://www.smartclubcloud.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Non-members
+				</a>
+			</li>
+			<li>
+				<a
+					class="btn-cta-sm"
+					href="https://www.smartclubcloud.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Members Login
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

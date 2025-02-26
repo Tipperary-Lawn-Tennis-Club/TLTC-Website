@@ -1,4 +1,4 @@
-export interface IPost {
+export interface IPost extends Record<string, any> {
 	id: string;
 	data: {
 		title: string;

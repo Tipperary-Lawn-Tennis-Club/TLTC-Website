@@ -1,0 +1,18 @@
+---
+import Footer from "./Footer.astro";
+import hero_image from "../assets/court-bg.jpg";
+import ContactForm from "./ContactForm.astro";
+---
+
+<div class="h-screen flex flex-col">
+	<div
+		class="flex-1 hero"
+		style={{
+			backgroundImage: `url(${hero_image.src})`,
+		}}
+	>
+		<div class="hero-overlay"></div>
+		<ContactForm />
+	</div>
+	<Footer />
+</div>
