@@ -3,3 +3,11 @@
 @plugin "daisyui" {
 	themes: light --default;
 }
+
+.btn-cta {
+	@apply btn btn-lg bg-[#04AA97] text-base-100 border-none shadow-none hover:transform scale-105 ease-in-out duration-300;
+}
+
+.btn-cta-sm {
+	@apply btn  bg-[#04AA97] text-base-100 border-none shadow-none;
+}

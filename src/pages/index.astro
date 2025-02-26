@@ -1,6 +1,5 @@
 ---
 // React Imports
-import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
@@ -22,7 +21,6 @@ console.log(news);
 ---
 
 <Layout>
-	<Navbar />
 	<Header />
 	<SectionTransition bgColor={"bg-gray-200"} scrollId={"content"} />
 	<NewsFeed data={sortedNews} />

@@ -1,12 +1,13 @@
 import React from "react";
 import logo_tr from "../assets/logo_tr.png";
+import "../styles/global.css";
 
 const Navbar = () => {
 	return (
-		<div className="navbar p-0 min-h-1.5 bg-gray-300 backdrop-blur-3xl text-gray-700 ">
+		<div className="navbar absolute top-0 p-3 min-h-1.5 bg-gray-900 opacity-75 backdrop-blur-3xl text-gray-200 ">
 			<div className="navbar-start">
 				<img src={logo_tr.src} alt="Club logo" className="w-16 h-16" />
-				<a href="/" className="font-semibold px-3 text-base-content text-sm">
+				<a href="/" className=" px-3 opacity-100 font-bold text-lg">
 					Tipperary Lawn Tennis Club{" "}
 				</a>
 			</div>
@@ -81,8 +82,8 @@ const Navbar = () => {
 					</ul>
 				</div>
 			</div>
-			<div className="navbar-end hidden lg:flex lg:items-center ">
-				<ul className="menu menu-horizontal gap-1 px-1">
+			<div className="navbar-end hidden lg:flex lg:items-center">
+				<ul className="menu menu-horizontal gap-6 font-bold text-lg px-1">
 					<li>
 						<a className="active:bg-primary active:text-primary-content">
 							Club
@@ -96,11 +97,11 @@ const Navbar = () => {
 							News
 						</a>
 					</li>
-					<li>
+					{/* <li>
 						<a className="active:bg-primary active:text-primary-content">
 							Diary
 						</a>
-					</li>
+					</li> */}
 					<li>
 						<a
 							href="/contact"
@@ -115,12 +116,12 @@ const Navbar = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Members Login
+							Non-members
 						</a>
 					</li>
 					<li>
 						<a
-							className="btn bg-accent/30 hover:bg-accent/60"
+							className="btn-cta-sm"
 							href="https://www.smartclubcloud.com/"
 							target="_blank"
 							rel="noopener noreferrer"
