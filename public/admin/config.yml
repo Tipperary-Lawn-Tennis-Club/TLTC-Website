@@ -7,14 +7,14 @@ media_folder: "src/assets/images"
 public_folder: "src/assets/images"
 
 collections:
-  - name: "news" # Used in routes, e.g., /admin/collections/news
-    label: "News" # Used in the UI
-    folder: "src/content/news" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    edit: true # Allow users to edit existing documents in this collection
-    delete: true # Allow users to delete documents in this collection
-    update: true # Allow users to update existing documents in this collection
-    fields: # The fields for each document, usually in frontmatter
+  - name: "news"
+    label: "News"
+    folder: "src/content/news"
+    create: true
+    edit: true
+    delete: true
+    update: true
+    fields:
       - {
           label: "Layout",
           name: "layout",
@@ -44,7 +44,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-    
+
   - name: "committee"
     label: "Committee"
     folder: "src/content/committee"
@@ -65,14 +65,26 @@ collections:
 
   - name: "photos"
     label: "Photos"
-    folder: "content/photos"
+    folder: "src/content/photos" # Make sure this matches your actual folder path
     create: true
+    edit: true
     delete: true
+    update: true
     slug: "{{slug}}"
     fields:
-      - { labelL: "Layout", name: "layout", widget: "hidden", default: "$/layouts/photos.astro" }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "$/layouts/photos.astro",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "alt", name: "alt", widget: "string", required: false }
-      - { label: "Description", name: "description", widget: "text", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          required: false,
+        }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image" }

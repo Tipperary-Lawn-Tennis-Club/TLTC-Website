@@ -1,5 +1,4 @@
 import { defineCollection, z } from "astro:content";
-import { date } from "astro:schema";
 
 const newsCollection = defineCollection({
 	schema: z.object({
