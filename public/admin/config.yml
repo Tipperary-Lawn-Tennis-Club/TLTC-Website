@@ -15,12 +15,6 @@ collections:
     delete: true
     update: true
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "$/layouts/news.astro",
-        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
@@ -35,12 +29,6 @@ collections:
     delete: true
     update: true
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "$/layouts/policies.astro",
-        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -53,31 +41,19 @@ collections:
     delete: true
     update: true
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "$/layouts/committee.astro",
-        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "photos"
     label: "Photos"
-    folder: "src/content/photos" # Make sure this matches your actual folder path
+    folder: "src/content/photos"
     create: true
     edit: true
     delete: true
     update: true
     slug: "{{slug}}"
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "$/layouts/photos.astro",
-        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "alt", name: "alt", widget: "string", required: false }
       - {
