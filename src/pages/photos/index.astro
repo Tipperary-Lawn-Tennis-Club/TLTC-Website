@@ -15,7 +15,7 @@ const sortedPhotos = allPhotos.sort(
 
 <Layout>
 	<Navbar />
-	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+	<div class="flex shrink-0">
 		{sortedPhotos.map((post) => <PostCard {...post} />)}
 	</div>
 	<Footer />

@@ -3,7 +3,6 @@ backend:
   repo: cmattless/tennis-test
   branch: main
 
-local_backend: true
 
 media_folder: "src/assets/images"
 public_folder: "src/assets/images"

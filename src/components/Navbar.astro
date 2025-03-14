@@ -63,7 +63,7 @@ import logo_tr from "../assets/logo_tr.png";
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Members Login
+						Non-Members Login
 					</a>
 				</li>
 				<li>
@@ -89,13 +89,6 @@ import logo_tr from "../assets/logo_tr.png";
 					News
 				</a>
 			</li>
-			{
-				/* <li>
-				<a class="active:bg-primary active:text-primary-content">
-					Diary
-				</a>
-			</li> */
-			}
 			<li>
 				<a
 					href="/contact"
@@ -104,24 +97,32 @@ import logo_tr from "../assets/logo_tr.png";
 					Contact
 				</a>
 			</li>
-			<li>
-				<a
-					href="https://www.smartclubcloud.com/"
-					target="_blank"
-					rel="noopener noreferrer"
+			<li class="dropdown dropdown-end">
+				<div tabindex={0} role="button" class="btn-ghost rounded-field">
+					Non-Members
+				</div>
+				<ul
+					tabindex={0}
+					class="menu dropdown-content bg-gray-600 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
 				>
-					Non-members
-				</a>
-			</li>
-			<li>
-				<a
-					class="btn btn-soft btn-accent shadow-none hover:text-white"
-					href="https://www.smartclubcloud.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Members Login
-				</a>
+					<li><a>League</a></li>
+					<li><a>Coaching</a></li>
+				</ul>
+				<li>
+					<a href="/photos" target="_blank" rel="noopener noreferrer">
+						Gallery
+					</a>
+					<li>
+						<a
+							class="btn btn-soft btn-accent shadow-none hover:text-white"
+							href="https://www.smartclubcloud.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Members Login
+						</a>
+					</li>
+				</li>
 			</li>
 		</ul>
 	</div>
