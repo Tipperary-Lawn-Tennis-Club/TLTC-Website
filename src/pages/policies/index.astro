@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import PostCard from "../../components/PostCard.astro";
+import "../../styles/global.css";
+import type { IPost } from "../../types";
+
+const allPolicies: IPost[] = await getCollection("policies");
+const sortedPolicies = allPolicies.sort(
+	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+---
+
+<Layout>
+	<Navbar />
+	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		{sortedPolicies.map((post) => <PostCard {...post} />)}
+	</div>
+	<Footer />
+</Layout>
