@@ -7,8 +7,8 @@ import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
 import type { IPost } from "../../types";
 
-const allPolicies: IPost[] = await getCollection("policies");
-const sortedPolicies = allPolicies.sort(
+const allPhotos: IPost[] = await getCollection("photos");
+const sortedPhotos = allPhotos.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
 ---
@@ -16,7 +16,7 @@ const sortedPolicies = allPolicies.sort(
 <Layout>
 	<Navbar />
 	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-		{sortedPolicies.map((post) => <PostCard {...post} />)}
+		{sortedPhotos.map((post) => <PostCard {...post} />)}
 	</div>
 	<Footer />
 </Layout>
