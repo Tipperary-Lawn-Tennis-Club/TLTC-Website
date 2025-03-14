@@ -65,4 +65,11 @@ collections:
           required: false,
         }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "image", widget: "image" }
+      # Here is the multi-image upload
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.image}}"  # show image path in list summary
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string", required: false }
