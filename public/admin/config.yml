@@ -26,7 +26,7 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Image Alt Text", name: "alt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      
+
   - name: "policies"
     label: "Policies"
     folder: "src/content/policies"
@@ -42,6 +42,7 @@ collections:
           default: "$/layouts/policies.astro",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
     
   - name: "committee"
@@ -59,16 +60,19 @@ collections:
           default: "$/layouts/committee.astro",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "photos"
     label: "Photos"
     folder: "content/photos"
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
       - { labelL: "Layout", name: "layout", widget: "hidden", default: "$/layouts/photos.astro" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "alt", name: "alt", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image" }
