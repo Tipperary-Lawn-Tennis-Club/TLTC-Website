@@ -1,23 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>TLTC Admin</title>
-
-  <!-- Tell Decap CMS where to find its config file -->
-  <link rel="cms-config-url" type="text/yaml" href="/admin/config.yml" />
-
-  <!-- Netlify Identity Widget -->
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+  <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
-
-  <!-- Load Decap CMS after the Identity script -->
-  <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
 </body>
 
 </html>
