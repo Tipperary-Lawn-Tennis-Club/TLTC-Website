@@ -1,12 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import hero_image from "../assets/hero.jpg";
+import Navbar from "../components/Navbar.astro";
+
+import "../styles/global.css";
 ---
 
 <Layout>
-	<div class="flex-2">
-		<div class="flex flex-col items-center justify-center h-full">
-			<h1 class="text-4xl font-bold">404</h1>
-			<p class="text-lg">Page not found</p>
+	<div class="h-screen flex flex-col">
+		<div class="flex-1 hero bg-gray-500">
+			<Navbar />
+			<div class="hero-overlay"></div>
+			<div class="hero-content text-neutral-content flex-col">
+				<div class="max-w-2xl text-center">
+					<h1 class="mb-5 text-6xl font-bold">Page Not Found.</h1>
+					<p class="mb-5 text-left text-lg">
+						The page you are looking for does not exist. Please check the URL or
+						click the button below to go back to the homepage.
+					</p>
+					<a href="/" class="btn-cta">Home</a>
+				</div>
+			</div>
 		</div>
+		<Footer />
 	</div>
 </Layout>
