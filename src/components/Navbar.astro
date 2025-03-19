@@ -12,29 +12,28 @@ import logo_tr from "../assets/logo_tr.png";
 		</a>
 	</div>
 	<!-- Mobile nav -->
-	<div class="navbar-end">
+	<div class="navbar-end 2xl:hidden">
 		<div class="dropdown dropdown-end">
-			<div tab-index={0} role="button" class="btn btn-ghost lg:hidden">
+			<div tabindex="0" role="button" class="btn btn-ghost btn-circle">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
+					class="size-6"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
 				>
-					{" "}
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
 						stroke-width="2"
-						d="M4 6h16M4 12h8m-8 6h16"
+						d="M4 6h16M4 12h16M4 18h7"
 					>
-					</path>{" "}
+					</path>
 				</svg>
 			</div>
 			<ul
-				tab-index={0}
-				class="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+				tabindex="0"
+				class="menu menu-lg dropdown-content bg-gray-300 font-bold text-base-content rounded-box z-1 mt-3 w-52 p-2 shadow"
 			>
 				<li>
 					<a class="active:bg-primary active:text-primary-content">Club</a>
@@ -56,9 +55,6 @@ import logo_tr from "../assets/logo_tr.png";
 					</a>
 				</li>
 				<li>
-					<a class="active:bg-primary active:text-primary-content">Diary</a>
-				</li>
-				<li>
 					<a
 						href="/contact"
 						class="active:bg-primary active:text-primary-content"
@@ -66,31 +62,39 @@ import logo_tr from "../assets/logo_tr.png";
 						Contact
 					</a>
 				</li>
-				<li>
-					<a
-						href="https://www.smartclubcloud.com/"
-						target="_blank"
-						rel="noopener noreferrer"
+				<li class="dropdown dropdown-end">
+					<div tabindex={0} role="button" class="btn-ghost rounded-field">
+						Non-Members
+					</div>
+					<ul
+						tabindex={0}
+						class="menu dropdown-content bg-gray-600 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
 					>
-						Non-Members Login
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn bg-accent/30 hover:bg-accent/60"
-						href="https://www.smartclubcloud.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Members Login
-					</a>
+						<li><a>League</a></li>
+						<li><a>Coaching</a></li>
+					</ul>
+					<li>
+						<a href="/photos" target="_blank" rel="noopener noreferrer">
+							Gallery
+						</a>
+						<li>
+							<a
+								class="btn btn-accent shadow-none text-white font-bold"
+								href="https://www.smartclubcloud.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Members Login
+							</a>
+						</li>
+					</li>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<!-- Full size nav -->
-	<div class="navbar-end hidden lg:flex lg:items-center">
-		<ul class="menu menu-horizontal gap-6 font-bold text-lg px-1">
+	<div class="navbar-end hidden 2xl:flex 2xl:items-center">
+		<ul class="menu menu-horizontal gap-6 font-bold px-1">
 			<li>
 				<a class="active:bg-primary active:text-primary-content">Club</a>
 			</li>
