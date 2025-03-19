@@ -6,8 +6,9 @@ import Footer from "../../components/Footer.astro";
 import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
 import type { IPost } from "../../types";
+import type { CollectionEntry } from "astro:content";
 
-const allPhotos: IPost[] = await getCollection("photos");
+const allPhotos: CollectionEntry<"photos">[] = await getCollection("photos");
 const sortedPhotos = allPhotos.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );

@@ -1,11 +1,5 @@
 export interface IPost extends Record<string, any> {
 	id: string;
-	data: {
-		title: string;
-		date: string;
-		thumbnail: string;
-		alt: string;
-	};
 	body: string;
 	filepath: string;
 	digest: string;

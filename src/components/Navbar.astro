@@ -11,6 +11,7 @@ import logo_tr from "../assets/logo_tr.png";
 			Tipperary Lawn Tennis Club{" "}
 		</a>
 	</div>
+	<!-- Mobile nav -->
 	<div class="navbar-end">
 		<div class="dropdown dropdown-end">
 			<div tab-index={0} role="button" class="btn btn-ghost lg:hidden">
@@ -47,6 +48,14 @@ import logo_tr from "../assets/logo_tr.png";
 					</a>
 				</li>
 				<li>
+					<a
+						href="/policies/"
+						class="active:bg-primary active:text-primary-content"
+					>
+						Policies
+					</a>
+				</li>
+				<li>
 					<a class="active:bg-primary active:text-primary-content">Diary</a>
 				</li>
 				<li>
@@ -79,6 +88,7 @@ import logo_tr from "../assets/logo_tr.png";
 			</ul>
 		</div>
 	</div>
+	<!-- Full size nav -->
 	<div class="navbar-end hidden lg:flex lg:items-center">
 		<ul class="menu menu-horizontal gap-6 font-bold text-lg px-1">
 			<li>
@@ -87,6 +97,14 @@ import logo_tr from "../assets/logo_tr.png";
 			<li>
 				<a href="/news/" class="active:bg-primary active:text-primary-content">
 					News
+				</a>
+			</li>
+			<li>
+				<a
+					href="/policies/"
+					class="active:bg-primary active:text-primary-content"
+				>
+					Policies
 				</a>
 			</li>
 			<li>
@@ -114,7 +132,7 @@ import logo_tr from "../assets/logo_tr.png";
 					</a>
 					<li>
 						<a
-							class="btn btn-soft btn-accent shadow-none hover:text-white"
+							class="btn btn-accent shadow-none text-white font-bold"
 							href="https://www.smartclubcloud.com/"
 							target="_blank"
 							rel="noopener noreferrer"

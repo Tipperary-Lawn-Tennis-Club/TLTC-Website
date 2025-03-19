@@ -1,15 +1,11 @@
 ---
 import { Image } from "astro:assets";
-interface Props {
-	data: {
-		thumbnail: string;
-		alt: string;
-		title: string;
-		date: string;
-	};
-	slug: string;
-}
+import type { CollectionEntry } from "astro:content";
 
+interface PostCardProps {
+	data: CollectionEntry<"news">["data"];
+	slug: CollectionEntry<"news">["slug"];
+}
 const { data, slug } = Astro.props;
 ---
 
@@ -40,7 +36,6 @@ const { data, slug } = Astro.props;
 			<figure class="w-1/3 h-full" />
 			<div class="card-body flex flex-col justify-between w-2/3 p-4">
 				<h2 class="card-title">End of Feed!</h2>
-
 				<p>{new Date(Date.now()).toLocaleDateString()}</p>
 				<div class="card-actions justify-end" />
 			</div>
