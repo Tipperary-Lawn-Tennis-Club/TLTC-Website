@@ -15,7 +15,7 @@ const { Content, headings } = await render(entry);
 			variant === "news" && (
 				<div class="hero min-h-[400px] bg-base-200 rounded-lg overflow-hidden mb-8">
 					{entry.data.thumbnail && (
-						<Image
+						<img
 							class="object-cover w-full h-full"
 							src={entry.data.thumbnail}
 							alt={entry.data.alt}
