@@ -3,20 +3,17 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
-import type { IPost } from "../../types";
+import type { CollectionEntry } from "astro:content";
 
-const allCommittee: IPost[] = await getCollection("committee");
-const sortedCommittee = allCommittee.sort(
-	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
-);
+const allCommittee: CollectionEntry<"committee">[] =
+	await getCollection("committee");
 ---
 
 <Layout>
 	<Navbar />
 	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-		{sortedCommittee.map((post) => <PostCard {...post} />)}
+		{allCommittee.map((post) => <h1>YES!</h1>)}
 	</div>
 	<Footer />
 </Layout>
