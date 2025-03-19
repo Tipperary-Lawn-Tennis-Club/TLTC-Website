@@ -2,7 +2,7 @@
 layout: $/layouts/news.astro
 title: A second post
 date: 2025-02-21T23:11:00.000Z
-thumbnail: ./images/ball-water.jpg
+thumbnail: ../../assets/images/ball-water.jpg
 alt: tennis with water around it in mid air
 ---
 Lorem ipsum odor amet, consectetuer adipiscing elit. Tincidunt magnis molestie lectus condimentum; dolor enim. Dui feugiat ornare hendrerit efficitur nibh nascetur euismod. Praesent dignissim convallis auctor sollicitudin sodales mollis. Non quisque dolor aptent platea semper. Ut duis dapibus in magnis consequat, orci interdum. Odio ante senectus congue urna class. Lacus lobortis ut rhoncus cras augue interdum nullam tristique pellentesque. Iaculis eu tincidunt orci sodales ex eleifend vestibulum aliquam maecenas.
