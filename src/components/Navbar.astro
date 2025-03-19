@@ -37,13 +37,6 @@ import logo_tr from "../assets/logo_tr.png";
 			>
 				<li>
 					<a
-						class="active:bg-primary active:text-primary-content hover:text-accent"
-					>
-						Club
-					</a>
-				</li>
-				<li>
-					<a
 						href="/news/"
 						class="active:bg-primary active:text-primary-content hover:text-accent"
 					>
@@ -99,37 +92,45 @@ import logo_tr from "../assets/logo_tr.png";
 	<!-- Full size nav -->
 	<div class="navbar-end hidden 2xl:flex">
 		<ul class="menu menu-horizontal gap-6 items-center font-bold px-1">
-			<li>
-				<a
-					class="active:bg-primary active:text-primary-content hover:text-accent"
+			<li class="dropdown dropdown-end">
+				<div
+					tabindex={0}
+					role="button"
+					class="btn-ghost rounded-field hover:text-accent"
 				>
 					Club
-				</a>
-			</li>
-			<li>
-				<a
-					href="/news/"
-					class="active:bg-primary active:text-primary-content hover:text-accent"
+				</div>
+				<ul
+					tabindex={0}
+					class="menu dropdown-content bg-gray-700 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
 				>
-					News
-				</a>
+					<li>
+						<a
+							href="/news/"
+							class="active:bg-primary active:text-primary-content hover:text-accent"
+						>
+							News
+						</a>
+					</li>
+					<li>
+						<a
+							href="/policies/"
+							class="active:bg-primary active:text-primary-content hover:text-accent"
+						>
+							Policies
+						</a>
+					</li>
+					<li>
+						<a
+							href="/committee/"
+							class="active:bg-primary active:text-primary-content hover:text-accent"
+						>
+							Committee
+						</a>
+					</li>
+				</ul>
 			</li>
-			<li>
-				<a
-					href="/policies/"
-					class="active:bg-primary active:text-primary-content hover:text-accent"
-				>
-					Policies
-				</a>
-			</li>
-			<li>
-				<a
-					href="/committee/"
-					class="active:bg-primary active:text-primary-content hover:text-accent"
-				>
-					Committee
-				</a>
-			</li>
+
 			<li>
 				<a
 					href="/photos"

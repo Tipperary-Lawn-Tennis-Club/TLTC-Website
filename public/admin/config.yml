@@ -58,13 +58,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "alt", name: "alt", widget: "string", required: false }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "markdown",
-          required: false,
-        }
       - { label: "Date", name: "date", widget: "datetime" }
       - {
           label: "Images",
