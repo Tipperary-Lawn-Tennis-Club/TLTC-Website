@@ -20,7 +20,7 @@ const policyCollection = defineCollection({
 const committeeCollection = defineCollection({
 	schema: ({ image }) =>
 		z.object({
-			name: z.string(),
+			title: z.string(),
 			position: z.string(),
 			image: image(),
 			alt: z.string(),
