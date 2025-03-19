@@ -15,10 +15,14 @@ date: 2025-03-19T16:07:00.000Z
 images:
   - image: /src/assets/images/giorgio-trovato-_xty6ld8jgm-unsplash.jpg
     alt: cup
+    description: test-desc
   - image: /src/assets/images/ball-water.jpg
     alt: ball
+    description: test-desc
   - image: /src/assets/images/pfp.jpg
     alt: bobby
+    description: test description
   - image: /src/assets/images/moises-alex-wqi-pbyugn4-unsplash.jpg
     alt: tennis
+    description: test-desc
 ---
