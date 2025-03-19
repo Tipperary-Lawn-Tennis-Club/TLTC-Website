@@ -46,8 +46,8 @@ collections:
       - { label: "Position", name: "position", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Alt Text", name: "alt", widget: "string" }
-      - { label: "email", name: "email", widget: "string" required: false }
-      - { label: "Body", name: "body", widget: "markdown" required: false }
+      - { label: "email", name: "email", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "photos"
     label: "Photos"
