@@ -1,7 +1,7 @@
 ---
 title: Third News Article
 date: 2025-03-19T14:17:00.000Z
-thumbnail: src/assets/images/pfp.jpg
+thumbnail: /src/assets/images/pfp.jpg
 alt: Bobby
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet nisl ut risus pellentesque, nec pellentesque justo aliquam. Nullam posuere varius ipsum nec congue. In bibendum sollicitudin tortor. Donec aliquam risus efficitur ante feugiat, eget sollicitudin justo sodales. Proin facilisis condimentum egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec diam sem. Nunc vulputate ex quis tellus fermentum, at rhoncus tellus rutrum. Nulla ut lectus vel eros bibendum sollicitudin ac vitae purus. In vel lectus a massa congue rhoncus et a lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam ut arcu luctus, laoreet augue at, luctus nisi. Cras in orci maximus, pharetra enim nec, luctus dolor. Suspendisse fringilla sed urna vitae faucibus.
