@@ -8,6 +8,6 @@ const { policy, slug } = Astro.props;
 >
 	<span class="text-2xl">{policy.data.title}</span>
 	<span class="text-gray-500 font-light">
-		{new Date(policy.data.date).toLocaleDateString()}
+		{new Date(policy.data.date).toLocaleDateString("en-GB")}
 	</span>
 </a>

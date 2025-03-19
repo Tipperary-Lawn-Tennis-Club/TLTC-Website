@@ -1,7 +1,6 @@
 ---
 import PostCard from "./PostCard.astro";
 import { getCollection } from "astro:content";
-import type { IPost } from "../types";
 
 const allNews = await getCollection("news");
 
@@ -14,9 +13,9 @@ const sortedNews = allNews
 
 <div id="content" class="bg-gray-300 py-30">
 	<div class="container mx-auto">
-		<div class="flex flex-col gap-16 sm:rounded-2xl bg-gray-200">
-			<h2 class="text-4xl font-bold text-center">Latest News</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+		<div class="flex flex-col sm:rounded-2xl sm:bg-gray-200">
+			<h2 class="text-4xl font-bold text-center py-2">Latest News</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-8">
 				{sortedNews.map((post) => <PostCard {...post} />)}
 			</div>
 		</div>
