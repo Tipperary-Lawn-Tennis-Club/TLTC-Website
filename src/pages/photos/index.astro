@@ -1,24 +1,43 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import type { CollectionEntry } from "astro:content";
+
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import PostCard from "../../components/PostCard.astro";
+import GalleryLayout from "../../layouts/GalleryLayout.astro";
+
 import "../../styles/global.css";
-import type { IPost } from "../../types";
-import type { CollectionEntry } from "astro:content";
 
 const allPhotos: CollectionEntry<"photos">[] = await getCollection("photos");
 const sortedPhotos = allPhotos.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
-console.log(sortedPhotos[0]);
+
+const images = sortedPhotos.flatMap((post) =>
+	post.data.images.map((image: { src: string; alt: string }) => image)
+);
 ---
 
-<Layout>
+<GalleryLayout>
 	<Navbar />
-	<div class="grid grid-cols-4 gap-4">
-		{sortedPhotos.map((post: IPost) => <h1>image</h1>)}
+	<div
+		class="mx-auto grid grid-cols-2 sm:grid-cols-2 gap-4 p-4"
+	>
+		{
+			images.map((image, index) => (
+				<div
+					key={index}
+					class="overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+				>
+					<img
+						src={image.image.src}
+						alt={image.alt}
+						class="w-full h-auto object-cover"
+					/>
+				</div>
+			))
+		}
 	</div>
 	<Footer />
-</Layout>
+</GalleryLayout>
