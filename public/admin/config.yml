@@ -74,4 +74,4 @@ collections:
         summary: "{{fields.image}}"  # show image path in list summary
         fields:
           - { label: "Image", name: "image", widget: "image" }
-          - { label: "Alt text", name: "alt", widget: "string", required: false }
+          - { label: "Alt text", name: "alt", widget: "string", required: false }4

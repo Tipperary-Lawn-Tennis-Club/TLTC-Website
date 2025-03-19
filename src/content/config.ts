@@ -28,13 +28,18 @@ const committeeCollection = defineCollection({
 });
 
 const photoCollection = defineCollection({
-	schema: z.object({
-		title: z.string(),
-		date: z.date(),
-		description: z.string(),
-		image: z.string(),
-		alt: z.string().optional(),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			date: z.date(),
+			description: z.string(),
+			images: z.array(
+				z.object({
+					image: image(),
+					alt: z.string().optional(),
+				})
+			),
+		}),
 });
 
 export const collections = {
