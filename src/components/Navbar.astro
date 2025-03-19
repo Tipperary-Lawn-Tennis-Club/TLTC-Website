@@ -36,12 +36,16 @@ import logo_tr from "../assets/logo_tr.png";
 				class="menu menu-lg dropdown-content bg-gray-300 font-bold text-base-content rounded-box z-1 mt-3 w-52 p-2 shadow"
 			>
 				<li>
-					<a class="active:bg-primary active:text-primary-content">Club</a>
+					<a
+						class="active:bg-primary active:text-primary-content hover:text-accent"
+					>
+						Club
+					</a>
 				</li>
 				<li>
 					<a
 						href="/news/"
-						class="active:bg-primary active:text-primary-content"
+						class="active:bg-primary active:text-primary-content hover:text-accent"
 					>
 						News
 					</a>
@@ -49,7 +53,7 @@ import logo_tr from "../assets/logo_tr.png";
 				<li>
 					<a
 						href="/policies/"
-						class="active:bg-primary active:text-primary-content"
+						class="active:bg-primary active:text-primary-content hover:text-accent"
 					>
 						Policies
 					</a>
@@ -57,37 +61,37 @@ import logo_tr from "../assets/logo_tr.png";
 				<li>
 					<a
 						href="/contact"
-						class="active:bg-primary active:text-primary-content"
+						class="active:bg-primary active:text-primary-content hover:text-accent"
 					>
 						Contact
 					</a>
 				</li>
-				<li class="dropdown dropdown-end">
+				<li>
+					<a href="/photos" target="_blank" rel="noopener noreferrer">
+						Gallery
+					</a>
+				</li>
+				<li class="dropdown dropdown-hover dropdown-left">
 					<div tabindex={0} role="button" class="btn-ghost rounded-field">
 						Non-Members
 					</div>
 					<ul
 						tabindex={0}
-						class="menu dropdown-content bg-gray-600 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+						class="menu dropdown-content rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
 					>
-						<li><a>League</a></li>
-						<li><a>Coaching</a></li>
+						<li class="hover:text-accent"><a>League</a></li>
+						<li class="hover:text-accent"><a>Coaching</a></li>
 					</ul>
-					<li>
-						<a href="/photos" target="_blank" rel="noopener noreferrer">
-							Gallery
-						</a>
-						<li>
-							<a
-								class="btn btn-accent shadow-none text-white font-bold"
-								href="https://www.smartclubcloud.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Members Login
-							</a>
-						</li>
-					</li>
+				</li>
+				<li>
+					<a
+						class="btn btn-accent shadow-none text-white font-bold"
+						href="https://www.smartclubcloud.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Members Login
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -96,17 +100,24 @@ import logo_tr from "../assets/logo_tr.png";
 	<div class="navbar-end hidden 2xl:flex 2xl:items-center">
 		<ul class="menu menu-horizontal gap-6 font-bold px-1">
 			<li>
-				<a class="active:bg-primary active:text-primary-content">Club</a>
+				<a
+					class="active:bg-primary active:text-primary-content hover:text-accent"
+				>
+					Club
+				</a>
 			</li>
 			<li>
-				<a href="/news/" class="active:bg-primary active:text-primary-content">
+				<a
+					href="/news/"
+					class="active:bg-primary active:text-primary-content hover:text-accent"
+				>
 					News
 				</a>
 			</li>
 			<li>
 				<a
 					href="/policies/"
-					class="active:bg-primary active:text-primary-content"
+					class="active:bg-primary active:text-primary-content hover:text-accent"
 				>
 					Policies
 				</a>
@@ -114,36 +125,44 @@ import logo_tr from "../assets/logo_tr.png";
 			<li>
 				<a
 					href="/contact"
-					class="active:bg-primary active:text-primary-content"
+					class="active:bg-primary active:text-primary-content hover:text-accent"
 				>
 					Contact
 				</a>
 			</li>
+			<li>
+				<a
+					href="/photos"
+					class="active:bg-primary active:text-primary-content hover:text-accent"
+				>
+					Gallery
+				</a>
+			</li>
 			<li class="dropdown dropdown-end">
-				<div tabindex={0} role="button" class="btn-ghost rounded-field">
+				<div
+					tabindex={0}
+					role="button"
+					class="btn-ghost rounded-field hover:text-accent"
+				>
 					Non-Members
 				</div>
 				<ul
 					tabindex={0}
-					class="menu dropdown-content bg-gray-600 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+					class="menu dropdown-content bg-gray-900 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
 				>
-					<li><a>League</a></li>
-					<li><a>Coaching</a></li>
+					<li class="hover:text-accent"><a>League</a></li>
+					<li class="hover:text-accent"><a>Coaching</a></li>
 				</ul>
+
 				<li>
-					<a href="/photos" target="_blank" rel="noopener noreferrer">
-						Gallery
+					<a
+						class="btn btn-accent shadow-none text-white font-bold"
+						href="https://www.smartclubcloud.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Members Login
 					</a>
-					<li>
-						<a
-							class="btn btn-accent shadow-none text-white font-bold"
-							href="https://www.smartclubcloud.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Members Login
-						</a>
-					</li>
 				</li>
 			</li>
 		</ul>
