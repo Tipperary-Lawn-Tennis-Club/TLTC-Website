@@ -21,7 +21,7 @@ const { data, slug } = Astro.props;
 			</figure>
 			<div class="card-body flex flex-col justify-between w-2/3 p-4">
 				<a href={`/news/${slug}`}>
-					<h2 class="card-title">{data.title}</h2>
+					<h2 class="card-title capitalize">{data.title}</h2>
 				</a>
 				<p>{new Date(data.date).toLocaleDateString("en-GB")}</p>
 				<div class="card-actions justify-end">
