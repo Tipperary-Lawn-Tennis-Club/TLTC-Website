@@ -12,12 +12,13 @@ const allPhotos: CollectionEntry<"photos">[] = await getCollection("photos");
 const sortedPhotos = allPhotos.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
+console.log(sortedPhotos[0]);
 ---
 
 <Layout>
 	<Navbar />
-	<div class="flex shrink-0">
-		{sortedPhotos.map((post) => <PostCard {...post} />)}
+	<div class="grid grid-cols-4 gap-4">
+		{sortedPhotos.map((post: IPost) => <h1>image</h1>)}
 	</div>
 	<Footer />
 </Layout>
