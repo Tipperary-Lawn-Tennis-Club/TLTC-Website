@@ -19,8 +19,11 @@ const policyCollection = defineCollection({
 
 const committeeCollection = defineCollection({
 	schema: z.object({
-		title: z.string(),
-		date: z.date(),
+		name: z.string(),
+		position: z.string(),
+		image: z.string(),
+		alt: z.string(),
+		email: z.string(),
 	}),
 });
 

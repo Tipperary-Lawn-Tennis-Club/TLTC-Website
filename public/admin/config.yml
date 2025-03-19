@@ -42,9 +42,12 @@ collections:
     delete: true
     update: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Alt Text", name: "alt", widget: "string" }
+      - { label: "email", name: "email", widget: "string" required: false }
+      - { label: "Body", name: "body", widget: "markdown" required: false }
 
   - name: "photos"
     label: "Photos"
