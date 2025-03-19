@@ -19,7 +19,7 @@ console.log(post);
 			</div>
 		)
 	}
-	<!-- {/* Article content */}
+	{/* Article content */}
 	<div class="prose lg:prose-xl max-w-none">
 		<h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
 		<div class="flex items-center gap-4 mb-8">
@@ -29,8 +29,8 @@ console.log(post);
 			</small>
 		</div>
 
-		<div class="divider"></div> -->
+		<div class="divider"></div>
 
 	{/* Article body */}
-	<!-- <div class="mt-8 prose">{post.body}</div> -->
+	<div class="mt-8 prose" set:html={post.rendered.html}></div>
 </article>

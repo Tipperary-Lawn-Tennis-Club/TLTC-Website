@@ -19,9 +19,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props as { post: CollectionEntry<"policies"> };
 ---
-
 <PolicyLayout>
-	<Navbar />
-	<Article { ...post} />
+	<div class="flex-2">
+		<div><Navbar /></div>
+		<div class="flex flex-col">
+			<div class="grow py-10 px-3">
+				<div class="text-4xl font-bold pt-30">
+					<Article post={post} variant="policy" />
+				</div>
+			
+		
+			</div>
+		</div>
+	</div>
 	<Footer />
 </PolicyLayout>
