@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 import Article from "../../components/Article.astro";
-import Layout from "../../layouts/Layout.astro";
+import NewsLayout from "../../layouts/NewsLayout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 
@@ -20,8 +20,16 @@ export async function getStaticPaths() {
 const { post } = Astro.props as { post: CollectionEntry<"news"> };
 ---
 
-<Layout>
-	<Navbar />
-	<Article {post} variant="news" />
+<NewsLayout>
+	<div class="flex-2">
+		<div><Navbar /></div>
+		<div class="flex flex-col">
+			<div class="grow py-10 px-3">
+				<div class="text-4xl font-bold pt-30">
+					<Article slug={post.slug} variant="news" />
+				</div>
+			</div>
+		</div>
+	</div>
 	<Footer />
-</Layout>
+</NewsLayout>
