@@ -18,13 +18,14 @@ const policyCollection = defineCollection({
 });
 
 const committeeCollection = defineCollection({
-	schema: z.object({
-		name: z.string(),
-		position: z.string(),
-		image: z.string(),
-		alt: z.string(),
-		email: z.string(),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			name: z.string(),
+			position: z.string(),
+			image: image(),
+			alt: z.string(),
+			email: z.string(),
+		}),
 });
 
 const photoCollection = defineCollection({
