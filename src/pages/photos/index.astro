@@ -20,24 +20,28 @@ const images = sortedPhotos.flatMap((post) =>
 ---
 
 <GalleryLayout>
-	<Navbar />
-	<div
-		class="mx-auto grid grid-cols-2 sm:grid-cols-2 gap-4 p-4"
-	>
-		{
-			images.map((image, index) => (
-				<div
-					key={index}
-					class="overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-				>
-					<img
-						src={image.image.src}
-						alt={image.alt}
-						class="w-full h-auto object-cover"
-					/>
-				</div>
-			))
-		}
+	<div class="flex-2">
+		<Navbar />
+		<div class="py-10 px-3">
+			<h1 class="text-4xl font-bold pt-30">Photo Gallery</h1>
+		</div>
+
+		<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+			{
+				images.map((image, index) => (
+					<div
+						key={index}
+						class="w-full transition-transform duration-300 hover:scale-[101%] aspect-square overflow-hidden rounded-lg"
+					>
+						<img
+							src={image.image.src}
+							alt={image.alt || "Image"}
+							class="w-full h-full object-cover"
+						/>
+					</div>
+				))
+			}
+		</div>
 	</div>
 	<Footer />
 </GalleryLayout>
