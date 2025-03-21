@@ -1,5 +1,5 @@
 ---
-title: A fourth upload
+title: "[Example Article]"
 date: 2025-03-19T14:44:00.000Z
 thumbnail: /src/assets/images/logo_colour-removebg-preview.png
 alt: tennis man
