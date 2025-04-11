@@ -7,8 +7,7 @@ import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
 import type { CollectionEntry } from "astro:content";
 
-
-const allNews: CollectionEntry<'news'>[] = await getCollection("news");
+const allNews: CollectionEntry<"news">[] = await getCollection("news");
 const sortedNews = allNews.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
@@ -16,6 +15,7 @@ const sortedNews = allNews.sort(
 
 <Layout>
 	<Navbar />
+	<h1 class="text-black">Club News</h1>
 	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 		{sortedNews.map((post) => <PostCard {...post} />)}
 	</div>
