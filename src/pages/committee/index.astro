@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 import "../../styles/global.css";
 import type { CollectionEntry } from "astro:content";
+import def_prof from "../../assets/default_image.png";
 import { Image } from "astro:assets";
 
 const allCommittee: CollectionEntry<"committee">[] =
@@ -22,8 +23,12 @@ console.log(allCommittee[0]);
 					<figure>
 						<Image
 							class="card-image"
-							src={post.data.image}
+							src={post.data.image || def_prof}
 							alt={post.data.alt || post.data.title}
+							height={384}
+							width={384}
+							loading="lazy"
+							
 						/>
 					</figure>
 					<div class="card-body">
