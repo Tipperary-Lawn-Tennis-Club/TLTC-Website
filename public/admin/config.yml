@@ -3,9 +3,8 @@ backend:
   repo: cmattless/tennis-test
   branch: main
 
-
-media_folder: "src/assets/images"
-public_folder: "src/assets/images"
+media_folder: "/src/assets/images"
+public_folder: "/src/assets/images"
 
 collections:
   - name: "news"
@@ -42,7 +41,7 @@ collections:
     delete: true
     update: true
     fields:
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Name", name: "title", widget: "string" }
       - { label: "Position", name: "position", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Alt Text", name: "alt", widget: "string" }
@@ -59,19 +58,15 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "alt", name: "alt", widget: "string", required: false }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "markdown",
-          required: false,
-        }
       - { label: "Date", name: "date", widget: "datetime" }
-      # Here is the multi-image upload
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        summary: "{{fields.image}}"  # show image path in list summary
-        fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Alt text", name: "alt", widget: "string", required: false }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "list",
+          fields:
+            [
+              { label: "Image", name: "image", widget: "image" },
+              { label: "Alt Text", name: "alt", widget: "string" },
+              { label: "Description", name: "description", widget: "markdown", required: false },
+            ],
+        }

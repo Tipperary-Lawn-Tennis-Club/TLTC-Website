@@ -1,23 +1,77 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import Navbar from "../../components/Navbar.astro";
-import Footer from "../../components/Footer.astro";
-import PostCard from "../../components/PostCard.astro";
-import "../../styles/global.css";
-import type { IPost } from "../../types";
 import type { CollectionEntry } from "astro:content";
 
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import GalleryLayout from "../../layouts/GalleryLayout.astro";
+
+import "../../styles/global.css";
+
 const allPhotos: CollectionEntry<"photos">[] = await getCollection("photos");
-const sortedPhotos = allPhotos.sort(
+const sortedPhotoSets = allPhotos.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
+
+console.log(sortedPhotoSets[0].data.images[0]);
 ---
 
-<Layout>
-	<Navbar />
-	<div class="flex shrink-0">
-		{sortedPhotos.map((post) => <PostCard {...post} />)}
+<GalleryLayout>
+	<div class="flex-2">
+		<Navbar />
+
+		<div class="container mx-auto">
+			<div class="py-10 px-3">
+				<h1 class="text-4xl font-bold pt-30">Photo Gallery</h1>
+			</div>
+			{
+				sortedPhotoSets.map((photoSet) => (
+					<div class="py-10 px-3">
+						<h2 class="text-2xl font-bold">{photoSet.data.title}</h2>
+						<p class="text-lg">
+							{new Date(photoSet.data.date).toLocaleDateString("en-GB", {
+								year: "numeric",
+								month: "long",
+								day: "numeric",
+							})}
+						</p>
+						<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-2">
+							{photoSet.data.images.map((photo) => (
+								<div class="w-full transition-transform duration-300 hover:scale-[101%] aspect-square overflow-hidden rounded-lg">
+									<Image
+										class="w-full h-full object-cover"
+										src={photo.image}
+										alt={photo.alt || photoSet.data.title}
+									/>
+
+									{/* <div class="">
+										<p>{photo}</p>
+									</div> */}
+								</div>
+							))}
+						</div>
+					</div>
+				))
+			}
+		</div>
+
+		<!-- <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+			{
+				images.map((image, index) => (
+					<div
+						key={index}
+						class="w-full transition-transform duration-300 hover:scale-[101%] aspect-square overflow-hidden rounded-lg"
+					>
+						<img
+							src={image.image.src}
+							alt={image.alt || "Image"}
+							class="w-full h-full object-cover"
+						/>
+					</div>
+				))
+			}
+		</div> -->
 	</div>
 	<Footer />
-</Layout>
+</GalleryLayout>

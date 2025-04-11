@@ -18,23 +18,29 @@ const policyCollection = defineCollection({
 });
 
 const committeeCollection = defineCollection({
-	schema: z.object({
-		name: z.string(),
-		position: z.string(),
-		image: z.string(),
-		alt: z.string(),
-		email: z.string(),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			position: z.string(),
+			image: image(),
+			alt: z.string(),
+			email: z.string(),
+		}),
 });
 
 const photoCollection = defineCollection({
-	schema: z.object({
-		title: z.string(),
-		date: z.date(),
-		description: z.string(),
-		image: z.string(),
-		alt: z.string().optional(),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			date: z.date(),
+			images: z.array(
+				z.object({
+					image: image(),
+					alt: z.string().optional(),
+					description: z.string().optional(),
+				})
+			),
+		}),
 });
 
 export const collections = {

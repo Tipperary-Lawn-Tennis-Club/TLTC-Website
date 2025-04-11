@@ -3,20 +3,55 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
-import type { IPost } from "../../types";
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 
-const allCommittee: IPost[] = await getCollection("committee");
-const sortedCommittee = allCommittee.sort(
-	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
-);
+const allCommittee: CollectionEntry<"committee">[] =
+	await getCollection("committee");
+
+console.log(allCommittee[0]);
 ---
 
 <Layout>
 	<Navbar />
 	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-		{sortedCommittee.map((post) => <PostCard {...post} />)}
+		{
+			allCommittee.map((post) => (
+				<div class="card bg-base-100 w-96 shadow-sm">
+					<figure>
+						<Image
+							class="card-image"
+							src={post.data.image}
+							alt={post.data.alt || post.data.title}
+						/>
+					</figure>
+					<div class="card-body">
+						<h2 class="card-title">{post.data.title}</h2>
+						<p>{post.data.position}</p>
+						{post.data.email && (
+							<div class="flex items-center gap-2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="size-6"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+									/>
+								</svg>
+								{post.data.email}
+							</div>
+						)}
+					</div>
+				</div>
+			))
+		}
 	</div>
 	<Footer />
 </Layout>
