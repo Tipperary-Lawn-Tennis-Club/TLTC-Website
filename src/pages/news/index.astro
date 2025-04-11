@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.astro";
 import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
 import type { CollectionEntry } from "astro:content";
+import NewsLayout from "../../layouts/NewsLayout.astro";
 
 const allNews: CollectionEntry<"news">[] = await getCollection("news");
 const sortedNews = allNews.sort(
@@ -13,11 +14,15 @@ const sortedNews = allNews.sort(
 );
 ---
 
-<Layout>
-	<Navbar />
-	<h1 class="text-black">Club News</h1>
-	<div class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-		{sortedNews.map((post) => <PostCard {...post} />)}
+<NewsLayout>
+	<div class="flex-2">
+		<Navbar />
+		<div
+			class="grid grid-cols-1 px-3 py-40 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+		>
+			<h1 class="text-black col-span-3 text-2xl font-bold my-12">Club News</h1>
+			{sortedNews.map((post) => <PostCard {...post} />)}
+		</div>
 	</div>
 	<Footer />
-</Layout>
+</NewsLayout>
