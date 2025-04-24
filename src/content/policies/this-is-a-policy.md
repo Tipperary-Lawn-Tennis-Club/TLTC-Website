@@ -1,25 +1,43 @@
 ---
-title: This is a policy
-date: 2025-03-19T10:19:00.000Z
+title: CODE OF CONDUCT FOR  CHILDREN
+date: 2024-09-01T00:00:00.000Z
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt fringilla massa quis sodales. Cras eleifend arcu ullamcorper tellus tincidunt, a molestie lorem consectetur. Donec magna nisl, tristique non nunc in, gravida auctor mauris. Sed accumsan, orci non tincidunt molestie, urna lectus imperdiet mi, sit amet condimentum dolor dolor sed enim. Duis iaculis blandit velit, sed tempor nibh pretium vel. Cras eget turpis et dolor porttitor dapibus. Maecenas lacinia elit at ante pellentesque, nec aliquam arcu rhoncus. Aenean consectetur quis massa at porta. Etiam tempor, nunc non ullamcorper aliquam, risus mi vestibulum arcu, id efficitur justo justo convallis odio. Aenean vehicula pulvinar viverra. Phasellus consectetur eros vitae mi dictum, quis blandit massa feugiat. Vivamus accumsan purus eget nisl pulvinar malesuada. Praesent viverra sed diam in maximus. Vestibulum eleifend fringilla tellus, eu ornare tellus vehicula non. Maecenas feugiat nisl turpis, ac ultricies lorem pellentesque non. Vivamus auctor rutrum tincidunt.
+All junior members are required to abide by the following Code of Conduct.
 
-![cup](/src/assets/images/giorgio-trovato-_xty6ld8jgm-unsplash.jpg "winner!")
+• Play fairly and have fun.
 
-Donec volutpat lectus nunc, eget facilisis tellus interdum vitae. Vivamus aliquam, est eget pharetra venenatis, dui arcu dignissim tortor, sed molestie neque lacus in felis. Nunc molestie ultrices sodales. Proin imperdiet nisi nec pulvinar cursus. Suspendisse vulputate gravida sapien ac ultrices. Duis vel blandit felis, quis suscipit est. Quisque condimentum diam et metus aliquet, ut convallis purus dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et vehicula est. Pellentesque porta nisl lorem, et dignissim velit cursus id. Morbi quam elit, cursus vel ligula in, porttitor viverra mi.
+• Abide by the rules set down by team managers when travelling to away events.
 
-Suspendisse at odio feugiat, molestie arcu in, aliquet tellus. Aliquam erat volutpat. Vivamus hendrerit non felis et imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam consequat, lorem vitae interdum finibus, tortor tortor vulputate ex, et tempus leo erat nec nisi. Vivamus in tortor dictum, aliquam nisi eu, elementum ante. Quisque eleifend, arcu eu vehicula interdum, velit arcu tempus neque, vel interdum nunc sem ut urna. Ut sodales lacus lacus, eget rutrum ex sodales in. Etiam egestas massa nec lacus volutpat molestie. Sed pellentesque nulla lacus, at semper justo fermentum nec. Ut a pulvinar ante. Nunc dapibus mauris a sapien euismod euismod. Morbi ut pulvinar nibh, eu convallis turpis. Donec nec justo et est scelerisque pretium. Etiam metus purus, volutpat vitae dictum et, finibus eget orci.
+• Behave in a manner that avoids bringing the game of tennis into disrepute.
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus ex velit, iaculis at dolor non, euismod tempus sapien. Sed porta nulla condimentum, fermentum leo a, accumsan neque. Etiam vel ligula elit. Etiam eget hendrerit magna. Fusce quis lorem eget diam imperdiet luctus. Aenean dictum nunc ipsum, ac pulvinar justo vulputate ac. Proin eros ipsum, hendrerit ut consectetur mattis, dignissim et diam. Fusce consequat blandit laoreet. Praesent massa purus, sodales id tortor non, sodales dignissim purus. Aliquam purus mauris, pellentesque at turpis vel, ornare dignissim erat. Nam placerat vitae risus nec pulvinar. Phasellus et mattis augue. Nulla quis pharetra lorem, eget elementum neque. Aenean sollicitudin, sem a dignissim pretium, libero augue aliquam ex, et maximus mi sem imperdiet elit. Phasellus semper nisi et finibus mattis.
+• Respect officials and accept their decisions.
 
-Duis ut tincidunt enim, lobortis interdum nunc. Quisque mollis enim sit amet quam tempus rhoncus. Phasellus molestie tellus ut augue ullamcorper tristique. Nunc volutpat enim sit amet scelerisque volutpat. Aliquam et velit at nisl hendrerit efficitur. Morbi bibendum lectus eget molestie suscipit. Proin a efficitur purus.
+• Talk to one of the Children’s Officers if I have concerns.
 
-Sed eu cursus leo. Etiam tempus nunc lectus, id fermentum elit tincidunt vel. Ut suscipit placerat sem, et congue magna consequat et. Mauris ac maximus nisi. Quisque sed faucibus arcu. Donec id venenatis nisl. Vestibulum sed turpis nec sapien lobortis varius id vitae ex. Curabitur et hendrerit risus. Quisque quis varius massa.
+• Respect opponents and always shake hands at the end of a match.
 
-Cras efficitur sodales facilisis. Suspendisse potenti. Mauris sit amet consequat arcu, nec aliquet diam. Vestibulum quis leo eget augue pellentesque hendrerit sed ut arcu. Praesent posuere eros gravida augue posuere, non feugiat magna luctus. Curabitur sit amet nisi in mi consectetur imperdiet. Duis metus enim, tincidunt eget risus gravida, ultrices aliquam lorem. Nulla quis elit a elit facilisis varius. Cras non vehicula lacus. Quisque non aliquet tortor. Maecenas ultricies porta est, a consectetur quam tincidunt ut.
+• Use my best efforts in competitive matches.
 
-Fusce semper nulla gravida dui sollicitudin hendrerit. In aliquam, nulla nec rhoncus blandit, nibh lacus pretium neque, id elementum urna lacus eget est. Suspendisse eu laoreet massa. Donec quis aliquet sapien, quis ultrices dui. Sed nisi erat, convallis quis scelerisque ultricies, pellentesque eget neque. Ut hendrerit lobortis justo ac euismod. Fusce consequat eros a rutrum luctus. Proin sed orci a velit volutpat varius. Etiam eu erat quis enim viverra pretium vitae sit amet mi. Etiam ultricies ex eu porttitor fermentum.
+• Refrain from the use of bad language and inappropriate gestures.
 
-Nulla non varius massa. Nam mi velit, vehicula vel euismod id, malesuada id magna. Nunc a imperdiet mauris. Fusce a massa sed justo varius aliquam vehicula non purus. Pellentesque dignissim semper nulla, non porta risus lobortis pulvinar. Vestibulum eleifend tortor eu pulvinar pulvinar. Praesent fermentum, arcu a suscipit sollicitudin, velit nibh rutrum lorem, eu consequat enim turpis ac risus. Nulla lobortis ullamcorper ex non pharetra. Vivamus laoreet ut urna sed dignissim.
+• Refrain from ball/racquet abuse.
 
-Duis porta velit nibh, nec lacinia ipsum iaculis vel. Curabitur varius ante sit amet maximus molestie. Ut eget blandit magna, ac mattis turpis. Ut tristique, tortor eu luctus hendrerit, enim dui dapibus lectus, sed lacinia enim risus nec libero. Fusce accumsan dictum erat, in efficitur justo lacinia sit amet. Nulla nec nisl lacinia, vulputate tellus ac, pretium nulla. In non tortor urna. Vivamus consequat auctor nisl sed dignissim. Nullam dapibus non ipsum in auctor. Integer varius gravida dolor, efficitur cursus dui venenatis ut. Nullam felis velit, vestibulum vel dolor sed, vulputate bibendum felis. Nulla iaculis enim non enim blandit, id cursus velit luctus. Vestibulum molestie magna enim, quis aliquam lorem pharetra sed. Aenean at turpis in est rhoncus tempus.
+• Refrain from the use of coaching during competition.
+
+• Never use unfair or bullying tactics to gain advantage on or off the court.
+
+• Never use bullying tactics to isolate another player.
+
+• Never pass on gossip about another player or adult.
+
+• Never make false allegations about another player or adult.
+
+• Never keep secrets about anyone who has caused me harm.
+
+• Win with grace and lose with dignity.\
+\
+**The undertaking to abide by and support the club’s Child Protection Policy given by the parent/legal**
+
+**guardian of junior members is deemed to be agreement on the part of the junior member to abide by**
+
+**this Code of Conduct.**
