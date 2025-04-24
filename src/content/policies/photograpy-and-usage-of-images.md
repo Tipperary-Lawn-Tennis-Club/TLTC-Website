@@ -19,8 +19,6 @@ When assessing the potential risks in the use of images of athletes, the most im
 - Consider using models or illustrations if you are promoting an activity  
 - Avoid the use of the first name and surname of individuals in a photograph. This reduces the risk of inappropriate, unsolicited attention from people within and outside the sport  
 
----
-
 **Rules to remember are**:
 
 - If the child is named, avoid using their photograph  
