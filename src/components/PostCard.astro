@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import fallback from "../assets/images/fallback.png";
+
 import type { CollectionEntry } from "astro:content";
 
 interface PostCardProps {
@@ -7,6 +9,8 @@ interface PostCardProps {
 	slug: CollectionEntry<"news">["slug"];
 }
 const { data, slug } = Astro.props;
+const thumbnail = data?.thumbnail ?? fallback;
+const alt = data?.alt ?? "Fallback image";
 console.log(data);
 ---
 
@@ -14,11 +18,7 @@ console.log(data);
 	data && slug ? (
 		<div class="card card-side bg-base-100 shadow-sm w-full h-64 overflow-hidden">
 			<figure class="w-1/3 h-full">
-				<Image
-					class="object-cover w-full h-full"
-					src={data.thumbnail}
-					alt={data.alt}
-				/>
+				<Image class="object-cover w-full h-full" src={thumbnail} alt={alt} />
 			</figure>
 			<div class="card-body flex flex-col justify-between w-2/3 p-4">
 				<a href={`/news/${slug}`}>
