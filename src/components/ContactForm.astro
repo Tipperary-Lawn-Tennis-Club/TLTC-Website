@@ -39,6 +39,17 @@
 	/>
 
 	<label class="label">
+		<span class="label-text">Subject</span>
+	</label>
+	<input
+		type="text"
+		name="subject"
+		placeholder="Subject"
+		class="input input-bordered w-full"
+		required
+	/>
+
+	<label class="label">
 		<span class="label-text">Message</span>
 	</label>
 	<textarea
@@ -51,3 +62,14 @@
 
 	<button type="submit" class="btn-cta-sm w-full mt-2">Send</button>
 </form>
+
+<script>
+	const form = document.getElementById("contactForm") as HTMLFormElement;
+	form?.addEventListener("submit", (event) => {
+		if (!form.checkValidity()) {
+			event.preventDefault();
+			event.stopPropagation();
+			alert("Please fill in all required fields correctly.");
+		}
+	});
+</script>
