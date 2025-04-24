@@ -4,16 +4,15 @@ import hero_image from "../assets/court-bg.jpg";
 import ContactForm from "./ContactForm.astro";
 ---
 
-<div class="h-screen flex flex-col">
+<div class="h-screen flex flex-col py-18">
 	<div
 		class="flex-1 hero"
-	
 		style={{
 			backgroundImage: `url(${hero_image.src})`,
 		}}
 	>
 		<div class="hero-overlay"></div>
-		<ContactForm />
+		<div class="py-18"><ContactForm /></div>
 	</div>
 	<Footer />
 </div>

@@ -4,13 +4,13 @@ const { policy, slug } = Astro.props;
 
 <a
 	href={`/policies/${slug}`}
-	class="flex-1 flex items-center justify-between py-5 border-b-2 w-full px-2"
+	class="flex-1 flex items-center justify-between py-5 border-b-2 px-2"
 >
 	<div class="max-w-xl flex flex-col">
 		<span class="text-2xl">{policy.data.title}</span>
-		<span class="text-gray-500 truncate">
+		<!-- <span class="text-gray-500 text-ellipsis w-full overflow-hidden">
 			{policy.body}
-		</span>
+		</span> -->
 		<span class="text-gray-500 font-light">
 			{new Date(policy.data.date).toLocaleDateString("en-GB")}
 		</span>
