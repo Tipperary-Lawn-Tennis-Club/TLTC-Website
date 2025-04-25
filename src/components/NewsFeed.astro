@@ -15,12 +15,17 @@ const sortedNews = allNews
 	<div class="container mx-auto">
 		<div class="flex flex-col sm:rounded-2xl sm:bg-gray-200">
 			<h2 class="text-4xl font-bold text-center py-2">Latest News</h2>
+			{
+				sortedNews.length === 0 ? (
+					<div class="col-span-1 sm:col-span-2 lg:col-span-3 text-center">
+						<p>No news available at the moment. Please check back later!</p>
+					</div>
+				) : null
+			}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-8">
 				{sortedNews.map((post) => <PostCard {...post} />)}
 				<div class="flex col-span-1 md:col-span-2 lg:col-span-3">
-					<a href="/news" class="btn-cta text-white mx-auto">
-						View All News
-					</a>
+					<a href="/news" class="btn-cta text-white mx-auto">View All News</a>
 				</div>
 			</div>
 		</div>
