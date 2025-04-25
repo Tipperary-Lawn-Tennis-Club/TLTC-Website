@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.astro";
 import PostCard from "../../components/PostCard.astro";
 import "../../styles/global.css";
 import type { CollectionEntry } from "astro:content";
+import NewsLayout from "../../layouts/NewsLayout.astro";
 
 const allNews: CollectionEntry<"news">[] = await getCollection("news");
 const sortedNews = allNews.sort(
