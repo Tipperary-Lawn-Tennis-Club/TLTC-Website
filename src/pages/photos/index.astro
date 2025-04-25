@@ -13,7 +13,6 @@ const allPhotos: CollectionEntry<"photos">[] = await getCollection("photos");
 const sortedPhotoSets = allPhotos.sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
-
 ---
 
 <GalleryLayout>
@@ -24,6 +23,13 @@ const sortedPhotoSets = allPhotos.sort(
 			<div class="py-10 px-3">
 				<h1 class="text-4xl font-bold pt-30">Photo Gallery</h1>
 			</div>
+			{
+				sortedPhotoSets.length === 0 ? (
+					<div class="col-span-1 sm:col-span-2 lg:col-span-3 text-center">
+						<p>No photos available at the moment. Please check back later!</p>
+					</div>
+				) : null
+			}
 			{
 				sortedPhotoSets.map((photoSet) => (
 					<div class="py-10 px-3">
