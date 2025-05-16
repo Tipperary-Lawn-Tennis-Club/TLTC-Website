@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import PolicyCard from "../../components/PolicyCard.astro";
+import RuleCard from "../../components/RuleCard.astro";
 import PolicyLayout from "../../layouts/PolicyLayout.astro";
 import "../../styles/global.css";
 import type { CollectionEntry } from "astro:content";
@@ -23,7 +23,7 @@ const sortedPolicies = allPolicies.sort(
 			<div class="flex flex-col px-3 gap-6">
 				{
 					sortedPolicies.map((post) => (
-						<PolicyCard policy={post} slug={post.slug} />
+						<RuleCard rule={post} slug={post.slug} />
 					))
 				}
 			</div>

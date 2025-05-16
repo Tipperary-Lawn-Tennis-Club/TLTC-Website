@@ -1,0 +1,36 @@
+---
+const { rule, slug } = Astro.props;
+---
+
+<a
+	href={`/rules/${slug}`}
+	class="flex-1 flex items-center justify-between py-5 border-b-2 px-2"
+>
+	<div class="max-w-xl flex flex-col">
+		<span class="text-2xl">{rule.data.title}</span>
+		<span class="text-gray-500 font-light">
+			{new Date(rule.data.date).toLocaleDateString("en-GB")}
+		</span>
+	</div>
+
+	<div class="flex flex-col items-end gap-2">
+		<button class="btn-cta-sm">
+			Read More
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-6 w-6"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M9 5l7 7-7 7"
+				>
+				</path>
+			</svg>
+		</button>
+	</div>
+</a>
