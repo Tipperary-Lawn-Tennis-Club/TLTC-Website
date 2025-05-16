@@ -13,7 +13,7 @@ const thumbnail = data?.thumbnail ?? fallback;
 const alt = data?.alt ?? "Fallback image";
 
 const checkChars = (str) => {
-	let max = 50;
+	let max = 150;
 	return str.length > max ? str.substring(0, max) + "..." : str;
 };
 ---
