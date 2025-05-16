@@ -33,6 +33,18 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "rules"
+    label: "Rules"
+    folder: "src/content/rules"
+    create: true
+    edit: true
+    delete: true
+    update: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "committee"
     label: "Committee Member"
     folder: "src/content/committee"

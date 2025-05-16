@@ -17,6 +17,13 @@ const policyCollection = defineCollection({
 	}),
 });
 
+const ruleCollection = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		date: z.date(),
+	}),
+});
+
 const committeeCollection = defineCollection({
 	schema: ({ image }) =>
 		z.object({
@@ -46,6 +53,7 @@ const photoCollection = defineCollection({
 export const collections = {
 	news: newsCollection,
 	policies: policyCollection,
+	rules: ruleCollection,
 	committee: committeeCollection,
 	photos: photoCollection,
 };

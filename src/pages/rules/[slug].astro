@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import Article from "../../components/Article.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+
+import "../../styles/global.css";
+import PolicyLayout from "../../layouts/PolicyLayout.astro";
+export async function getStaticPaths() {
+	const allRules = await getCollection("rules");
+
+	return allRules.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props as { post: CollectionEntry<"rules"> };
+---
+
+<PolicyLayout>
+	<div class="flex-2">
+		<div><Navbar /></div>
+		<div class="flex flex-col">
+			<div class="grow py-10 px-3">
+				<div class="text-4xl font-bold pt-30">
+					<Article slug={post.slug} variant="policies" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
+</PolicyLayout>
