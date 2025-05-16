@@ -57,7 +57,7 @@ Club coaching is arranged from time to time throughout the season and is general
 
 County Tipperary lawn tennis club welcome members guests. The following are the guidelines for inviting guests to the club.
 
-1.  Members may invite non-members to play in the club as a guest.
+1. Members may invite non-members to play in the club as a guest.
 2. Guests must be accompanied by a member
 3. Guest green fees are €5 per player
 4. Before playing guests should be signed into the Visitors Book by the member inviting them.
@@ -73,7 +73,7 @@ County Tipperary Lawn Tennis Club has adopted the Tennis Ireland Child Protectio
 
 Please note:
 
-* Theonuswill always be on the parents/Guardians to accept responsibility for their children while they are on the club property.
+* The onus will always be on the parents/Guardians to accept responsibility for their children while they are on the club property.
 * Theclub does not accept responsibility for juniors unsupervised at any time.
 * As a health and safety issue it is important that the rules are strictly adhered to
 
@@ -91,18 +91,13 @@ It is your club so care for it. Please make sure the premises is fully secured a
 
 **Breach Of Rules**
 
-
  Any breach of rules is the responsibility of the club committee to address and solve. The club is run by its members on a voluntary basis. The committee always welcomes constructive suggestions and feedback.
 
  The club rules are framed in the spirit of promoting an ethos of respect and high standards from all members who use the club
 
 This is your club, and you have the responsibility to contribute to its long term success.
 
-
-
 Tennis is excellent for maintaining cardiovascular and respiratory health. It calls on all the major muscle groups and is excellent for developing better balance, endurance and coordination. Sport is important for good mental health, social interaction, making friends and having fun.
-
-
 
 **GDPR Policy Statement**
 
