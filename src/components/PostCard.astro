@@ -11,7 +11,11 @@ interface PostCardProps {
 const { data, slug } = Astro.props;
 const thumbnail = data?.thumbnail ?? fallback;
 const alt = data?.alt ?? "Fallback image";
-console.log(data);
+
+const checkChars = (str) => {
+	let max = 50;
+	return str.length > max ? str.substring(0, max) + "..." : str;
+};
 ---
 
 {
@@ -22,7 +26,7 @@ console.log(data);
 			</figure>
 			<div class="card-body flex flex-col justify-between w-2/3 p-4">
 				<a href={`/news/${slug}`}>
-					<h2 class="card-title capitalize">{data.title}</h2>
+					<h2 class="card-title capitalize">{checkChars(data.title)}</h2>
 				</a>
 				<p>{new Date(data.date).toLocaleDateString("en-GB")}</p>
 				<div class="card-actions justify-end">
